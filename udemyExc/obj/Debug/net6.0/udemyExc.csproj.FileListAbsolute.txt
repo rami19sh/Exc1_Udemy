@@ -1,0 +1,14 @@
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\bin\Debug\net6.0\udemyExc.exe
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\bin\Debug\net6.0\udemyExc.deps.json
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\bin\Debug\net6.0\udemyExc.runtimeconfig.json
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\bin\Debug\net6.0\udemyExc.dll
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\bin\Debug\net6.0\udemyExc.pdb
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\obj\Debug\net6.0\udemyExc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\obj\Debug\net6.0\udemyExc.AssemblyInfoInputs.cache
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\obj\Debug\net6.0\udemyExc.AssemblyInfo.cs
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\obj\Debug\net6.0\udemyExc.csproj.CoreCompileInputs.cache
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\obj\Debug\net6.0\udemyExc.dll
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\obj\Debug\net6.0\refint\udemyExc.dll
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\obj\Debug\net6.0\udemyExc.pdb
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\obj\Debug\net6.0\udemyExc.genruntimeconfig.cache
+C:\Users\r.shekh\source\repos\udemyExc\udemyExc\obj\Debug\net6.0\ref\udemyExc.dll
