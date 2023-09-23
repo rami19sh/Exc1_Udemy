@@ -1,7 +1,11 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Diagnostics.Metrics;
 using System.Linq.Expressions;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
+using System.Xml.Linq;
 
 internal class Program
 {
@@ -293,6 +297,79 @@ internal class Program
         return "vowels from the word is : " +cnt;
 
     }
+    /*
+     * 1- When you post a message on Facebook, depending on the number of people who like your post, Facebook displays different information.
+
+If no one likes your post, it doesn't display anything.
+If only one person likes your post, it displays: [Friend's Name] likes your post.
+If two people like your post, it displays: [Friend 1] and [Friend 2] like your post.
+If more than two people like your post, it displays: [Friend 1], [Friend 2] and [Number of Other People] others like your post.
+
+Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
+    */
+    static string arrays_ques1()
+    {
+        var lst = new List<string>();
+        while (true)
+        {
+            Console.WriteLine("please enter name ,enter null to exit");
+            var input = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input) == true) break;
+            else
+                lst.Add(input);
+        }
+        if (lst.Count == 0) return "";
+        else if (lst.Count == 1) return lst.ElementAt(0) + "likes your post.";
+        else if (lst.Count == 2) return lst.ElementAt(0) + ","+ lst.ElementAt(1) +"likes your post.";
+        else 
+            return lst.ElementAt(0) + ","+ lst.ElementAt(1) +" and "+(lst.Count-2)+ " others like your post.";
+    }
+
+    //2- Write a program and ask the user to enter their name.Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
+    static string arrays_ques2()
+    {
+        Console.WriteLine("please enter your name :");
+        var input = Console.ReadLine();
+        var reversed_name = "";
+        for (int i =input.Length-1; i >= 0; i--)
+            reversed_name += input[i];
+        return reversed_name;
+        
+    }
+
+    //3- Write a program and ask the user to enter 5 numbers. If a number has been previously entered, display an error message and ask the user to re-try. Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
+
+    static string  arrays_ques3()
+    {
+        var lst = new List<int>();
+        while (lst.Count<5)
+        {
+            Console.WriteLine("please enter unique numbers :");
+            int num = Convert.ToInt32(Console.ReadLine());
+            if (lst.Contains(num) == false) lst.Add(num);
+            else
+                Console.WriteLine("error,re-try please");
+        }
+        lst.Sort();
+        return string.Join(" - ", lst);
+    }
+
+    //4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. The list of numbers may include duplicates. Display the unique numbers that the user has entered.
+    static string arrays_ques4()
+    {
+        var lst = new List<int>();
+        while(true)
+        {
+            Console.WriteLine("please enter a number :");
+            var input=Console.ReadLine();
+            if (input == "ok") break;
+            else
+                lst.Add(Int32.Parse(input)); 
+        }
+        lst=lst.Distinct().ToList();
+        return string.Join(" - ", lst);
+    }
+
     private static void Main(string[] args)
     {
         // Section 5 :Control Flow - part1
@@ -302,11 +379,11 @@ internal class Program
         //Console.WriteLine(Exc4_part1());
 
         // Section 5 :Control Flow - part2
-       // Console.WriteLine(ques1_part2());
-       // Console.WriteLine(ques2_part2());
+        // Console.WriteLine(ques1_part2());
+        // Console.WriteLine(ques2_part2());
         //Console.WriteLine(ques3_part2());
         // ques4_part2();
-       // Console.WriteLine(ques5_part2());
+        // Console.WriteLine(ques5_part2());
 
         //Section 8 Working with text
         // Console.WriteLine(ques1());
@@ -314,6 +391,12 @@ internal class Program
         //Console.WriteLine(ques3());
         // Console.WriteLine(ques4());
         // Console.WriteLine(ques5());
+
+        //Arrays and list
+        // Console.WriteLine(arrays_ques1());
+        //Console.WriteLine(arrays_ques2());
+        //Console.WriteLine(arrays_ques3());
+        Console.WriteLine(arrays_ques4());
 
 
     }
